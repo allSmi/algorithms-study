@@ -19,9 +19,12 @@ function netherLandsflag(arr, L, R, num) {
       cur++;
     }
   }
-  return arr;
+  return {
+    arr: arr,
+    rangeNum: `${less + 1} - ${more - 1}` // 等于num的区间
+  };
 }
 
 // 测试
 let netherLandsflagRes = netherLandsflag([2, 3, 5, 7, 5, 4, 5, 3, 4], 0, 6, 5);
-console.log(`netherLandsflagRes: ${netherLandsflagRes}`);
+console.log(`netherLandsflagRes: ${netherLandsflagRes.arr}`);
