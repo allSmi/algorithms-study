@@ -4,6 +4,7 @@
  * @param {Number} L 数组的开始
  * @param {Number} R 数组的结束
  * @param {Number} num 需要比较的数
+ * @returns {Object}
  */
 function netherLandsflag(arr, L, R, num) {
   let less = L - 1;
@@ -20,7 +21,7 @@ function netherLandsflag(arr, L, R, num) {
     }
   }
   return {
-    arr: arr,
+    arr: arr, // 排好序的数组
     rangeNum: `${less + 1} - ${more - 1}` // 等于num的区间
   };
 }
